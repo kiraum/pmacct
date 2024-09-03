@@ -79,7 +79,7 @@ jobs:
         run: |
           mkdir -p /tmp/docker
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: builder_${{ matrix.builder-name }}
           path: /tmp/docker
@@ -164,7 +164,7 @@ jobs:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: pmacct_docker_images
           path: /tmp/docker
